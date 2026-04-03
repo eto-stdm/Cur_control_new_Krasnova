@@ -114,7 +114,7 @@ namespace Cur_control_new_Krasnova
 
                 if (xparce && yparce)
                 {
-                    if (numx >= 0 && numy >= 0)
+                    if (numx > 0 && numy > 0)
                     {                    
                         double answer = 2 * (numx + numy);
                         AnswerTB.Text = "Периметр = " + answer;
@@ -146,7 +146,7 @@ namespace Cur_control_new_Krasnova
 
                 if (xparce)
                 {
-                    if (numx >= 0) {
+                    if (numx > 0) {
                         double answer = 2 * Math.PI * numx;
                         AnswerTB.Text = "Периметр = " + answer;
                         return true;
@@ -183,7 +183,7 @@ namespace Cur_control_new_Krasnova
 
                 if (xparce && yparce && zparce)
                 {
-                    if (numx >= 0 && numy >= 0 && numz >= 0)
+                    if (numx > 0 && numy > 0 && numz > 0)
                     {
                         double answer = numx + numy + numz;
                         AnswerTB.Text = "Периметр = " + answer;
