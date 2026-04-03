@@ -36,13 +36,13 @@
         <StackPanel Grid.Column="1">
             <GroupBox Header="Вид фигуры" Width="180">
                 <StackPanel>
-                    <RadioButton GroupName="Figs" Content="прямоугольник" Margin="10"/>
-                    <RadioButton GroupName="Figs" Content="круг" Margin="10"/>
-                    <RadioButton GroupName="Figs" Content="треугольник" Margin="10"/>
+                    <RadioButton x:Name="RectRB" GroupName="Figs" Content="прямоугольник" Margin="10" Checked="RectRB_Checked"/>
+                    <RadioButton x:Name="CircleRB" GroupName="Figs" Content="круг" Margin="10" Checked="CircleRB_Checked"/>
+                    <RadioButton x:Name="TriangRB" GroupName="Figs" Content="треугольник" Margin="10" Checked="TriangRB_Checked"/>
                 </StackPanel>
             </GroupBox>
             
-            <Button x:Name="CalculateBtn" Content="Вычислить" Width="70" Margin="10" HorizontalAlignment="Left"/>
+            <Button x:Name="CalculateBtn" Content="Вычислить" Width="70" Margin="10" HorizontalAlignment="Left" Click="CalculateBtn_Click"/>
         </StackPanel>
 
     </Grid>

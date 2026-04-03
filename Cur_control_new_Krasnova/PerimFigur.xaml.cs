@@ -24,5 +24,49 @@ namespace Cur_control_new_Krasnova
         {
             InitializeComponent();
         }
+
+        private void RectRB_Checked(object sender, RoutedEventArgs e)
+        {
+            FirstSideTB.Visibility = Visibility.Visible;
+            FirstSideText.Visibility = Visibility.Visible;
+            SecondSideTB.Visibility = Visibility.Visible;
+            SecondSideText.Visibility = Visibility.Visible;
+
+            ThirdSideTB.Visibility = Visibility.Collapsed;
+            ThirdSideText.Visibility = Visibility.Collapsed;
+            RadiusTB.Visibility = Visibility.Collapsed;
+            RadiusText.Visibility = Visibility.Collapsed;
+        }
+
+        private void CircleRB_Checked(object sender, RoutedEventArgs e)
+        {
+            FirstSideTB.Visibility = Visibility.Collapsed;
+            FirstSideText.Visibility = Visibility.Collapsed;
+            SecondSideTB.Visibility = Visibility.Collapsed;
+            SecondSideText.Visibility = Visibility.Collapsed;
+            ThirdSideTB.Visibility = Visibility.Collapsed;
+            ThirdSideText.Visibility = Visibility.Collapsed;
+
+            RadiusTB.Visibility = Visibility.Visible;
+            RadiusText.Visibility = Visibility.Visible;
+        }
+
+        private void TriangRB_Checked(object sender, RoutedEventArgs e)
+        {
+            FirstSideTB.Visibility = Visibility.Visible;
+            FirstSideText.Visibility = Visibility.Visible;
+            SecondSideTB.Visibility = Visibility.Visible;
+            SecondSideText.Visibility = Visibility.Visible;
+            ThirdSideTB.Visibility = Visibility.Visible;
+            ThirdSideText.Visibility = Visibility.Visible;
+
+            RadiusTB.Visibility = Visibility.Collapsed;
+            RadiusText.Visibility = Visibility.Collapsed;
+        }
+
+        private void CalculateBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
