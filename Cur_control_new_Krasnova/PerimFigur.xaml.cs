@@ -20,11 +20,17 @@ namespace Cur_control_new_Krasnova
     /// </summary>
     public partial class PerimFigur : Page
     {
+        /// <summary>
+        /// Конструктор страницы
+        /// </summary>
         public PerimFigur()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Сброс заполненных значений и очищение результата
+        /// </summary>
         private void Clearing()
         {
             AnswerTB.Text = "Периметр = ";
@@ -35,6 +41,9 @@ namespace Cur_control_new_Krasnova
             RadiusTB.Clear();
         }
 
+        /// <summary>
+        /// Обработка выбора кнопки "Прямоугольник"
+        /// </summary>
         private void RectRB_Checked(object sender, RoutedEventArgs e)
         {
             FirstSideTB.Visibility = Visibility.Visible;
@@ -50,6 +59,9 @@ namespace Cur_control_new_Krasnova
             Clearing();
         }
 
+        /// <summary>
+        /// Обработка выбора кнопки "Круг"
+        /// </summary>
         private void CircleRB_Checked(object sender, RoutedEventArgs e)
         {
             FirstSideTB.Visibility = Visibility.Collapsed;
@@ -65,6 +77,9 @@ namespace Cur_control_new_Krasnova
             Clearing();
         }
 
+        /// <summary>
+        /// Обработка выбора кнопки "Треугольник"
+        /// </summary>
         private void TriangRB_Checked(object sender, RoutedEventArgs e)
         {
             FirstSideTB.Visibility = Visibility.Visible;
@@ -80,6 +95,12 @@ namespace Cur_control_new_Krasnova
             Clearing();
         }
 
+        /// <summary>
+        /// Обработка входящих значений и вычисление периметра прямоугольника
+        /// </summary>
+        /// <param name="x">Первая сторона прямоугольника</param>
+        /// <param name="y">Вторая сторона прямоугольника</param>
+        /// <returns>Успешность операции</returns>
         public bool CalculateRect(string x, string y)
         {
 
@@ -102,6 +123,11 @@ namespace Cur_control_new_Krasnova
             else { MessageBox.Show("Заполните x, y!"); return false; }
         }
 
+        /// <summary>
+        /// Обработка входящих значений и вычисление периметра круга
+        /// </summary>
+        /// <param name="x">Радиус круга</param>
+        /// <returns>Успешность операции</returns>
         public bool CalculateCircle(string x)
         {
 
@@ -122,6 +148,13 @@ namespace Cur_control_new_Krasnova
             else { MessageBox.Show("Заполните x!"); return false; }
         }
 
+        /// <summary>
+        /// Обработка входящих значений и вычисление периметра треугольника
+        /// </summary>
+        /// <param name="x">Первая сторона треугольника</param>
+        /// <param name="y">Вторая сторона треугольника</param>
+        /// <param name="z">Третья сторона треугольника</param>
+        /// <returns>Успешность операции</returns>
         public bool CalculateTriang(string x, string y, string z)
         {
 
@@ -146,6 +179,9 @@ namespace Cur_control_new_Krasnova
             else { MessageBox.Show("Заполните x, y, z!"); return false; }
         }
 
+        /// <summary>
+        /// Обработка нажатия на кнопку "Вычислить"
+        /// </summary>
         private void CalculateBtn_Click(object sender, RoutedEventArgs e)
         {
             if (RectRB.IsChecked == true)
