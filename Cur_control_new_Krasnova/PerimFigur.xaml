@@ -30,7 +30,7 @@
                 </StackPanel>
             </StackPanel>
 
-            <TextBlock Text="Периметр = " Margin="10"/>
+            <TextBlock x:Name="AnswerTB" Text="Периметр = " Margin="10"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1">
