@@ -114,9 +114,16 @@ namespace Cur_control_new_Krasnova
 
                 if (xparce && yparce)
                 {
-                    double answer = 2 * (numx + numy);
-                    AnswerTB.Text = "Периметр = " + answer;
-                    return true;
+                    if (numx >= 0 && numy >= 0)
+                    {                    
+                        double answer = 2 * (numx + numy);
+                        AnswerTB.Text = "Периметр = " + answer;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введено отрицательное число!"); return false;
+                    }
                 }
                 else { MessageBox.Show("Введено не число!"); return false; }
             }
@@ -139,9 +146,15 @@ namespace Cur_control_new_Krasnova
 
                 if (xparce)
                 {
-                    double answer = 2 * Math.PI * numx;
-                    AnswerTB.Text = "Периметр = " + answer;
-                    return true;
+                    if (numx >= 0) {
+                        double answer = 2 * Math.PI * numx;
+                        AnswerTB.Text = "Периметр = " + answer;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введено отрицательное число!"); return false;
+                    }
                 }
                 else { MessageBox.Show("Введено не число!"); return false; }
             }
@@ -170,9 +183,16 @@ namespace Cur_control_new_Krasnova
 
                 if (xparce && yparce && zparce)
                 {
-                    double answer = numx + numy + numz;
-                    AnswerTB.Text = "Периметр = " + answer;
-                    return true;
+                    if (numx >= 0 && numy >= 0 && numz >= 0)
+                    {
+                        double answer = numx + numy + numz;
+                        AnswerTB.Text = "Периметр = " + answer;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введено отрицательное число!"); return false;
+                    }
                 }
                 else { MessageBox.Show("Введено не число!"); return false; }
             }
